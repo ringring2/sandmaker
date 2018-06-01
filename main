@@ -10,7 +10,7 @@
 #define MAP_ADJ_Y 2
 #define MAP_X 30
 #define MAP_Y 20
-void gotoxy(int x, int y) {
+void gotoxy(int x, int y) //x,y좌표로이동{
    COORD Pos = { x,y };
    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), Pos);
 }
@@ -21,8 +21,7 @@ void Gotoxy(int x, int y, char* s) { //x값을 2x로 변경, 좌표값에 바로
    printf("%s", s);
 }
 
-int begin(void)
-{
+int begin(void)//게임 시작 시 나오는 설명 
 	char choice;
 first:
 	clear;
